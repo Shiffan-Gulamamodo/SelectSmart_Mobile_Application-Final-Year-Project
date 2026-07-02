@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <!-- Premium Header -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_back_bg"
+                android:src="@drawable/outline_arrow_back_24"
+                app:tint="@color/black"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Compare Products"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Selection Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <!-- Product 1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/otp_box_background"
+                                android:padding="8dp">
+                                <ImageView
+                                    android:id="@+id/ivProd1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_launcher_foreground" />
+                            </FrameLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                app:hintEnabled="false"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="3dp"
+                                app:boxStrokeWidthFocused="3dp"
+                                app:boxCornerRadiusTopStart="12dp"
+                                app:boxCornerRadiusTopEnd="12dp"
+                                app:boxCornerRadiusBottomStart="12dp"
+                                app:boxCornerRadiusBottomEnd="12dp"
+                                app:endIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/spinnerProduct1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="14dp"
+                                    android:hint="Product 1"
+                                    android:inputType="none"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="#444444"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="150dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:background="#F0F0F0" />
+
+                        <!-- Product 2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/otp_box_background"
+                                android:padding="8dp">
+                                <ImageView
+                                    android:id="@+id/ivProd2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_launcher_foreground" />
+                            </FrameLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                app:hintEnabled="false"
+                                app:boxStrokeColor="@color/black"
+                                app:boxStrokeWidth="3dp"
+                                app:boxStrokeWidthFocused="3dp"
+                                app:boxCornerRadiusTopStart="12dp"
+                                app:boxCornerRadiusTopEnd="12dp"
+                                app:boxCornerRadiusBottomStart="12dp"
+                                app:boxCornerRadiusBottomEnd="12dp"
+                                app:endIconTint="@color/black">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/spinnerProduct2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="14dp"
+                                    android:hint="Product 2"
+                                    android:inputType="none"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="#444444"
+                                    android:enabled="false"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- VS Badge -->
+                    <TextView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_back_bg"
+                        android:gravity="center"
+                        android:text="VS"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Status Hint -->
+            <LinearLayout
+                android:id="@+id/llEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/balance_24dp"
+                    app:tint="#E0E0E0"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvCategoryHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Choose two products to see a detailed side-by-side comparison"
+                    android:textColor="#888888"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Comparison Table -->
+            <LinearLayout
+                android:id="@+id/comparisonContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!-- Core Specs Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quick Summary"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="20dp"/>
+
+                        <!-- Price Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ESTIMATED PRICE" android:textColor="#999999" android:textSize="11sp" android:gravity="center" android:letterSpacing="0.1" android:textStyle="bold"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                                <TextView android:id="@+id/tvPrice1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/main" android:textSize="18sp" android:textStyle="bold" tools:text="£1,399" />
+                                <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#F0F0F0" />
+                                <TextView android:id="@+id/tvPrice2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/main" android:textSize="18sp" android:textStyle="bold" tools:text="£699" />
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="16dp"/>
+                        </LinearLayout>
+
+                        <!-- Rating Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="USER RATING" android:textColor="#999999" android:textSize="11sp" android:gravity="center" android:letterSpacing="0.1" android:textStyle="bold"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                                    <RatingBar android:id="@+id/rb1" style="@style/Widget.AppCompat.RatingBar.Small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:isIndicator="true" android:progressTint="#FFC107" />
+                                    <TextView android:id="@+id/tvRating1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#666666" android:layout_marginTop="4dp" tools:text="4.7 / 5.0"/>
+                                </LinearLayout>
+                                <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#F0F0F0" />
+                                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                                    <RatingBar android:id="@+id/rb2" style="@style/Widget.AppCompat.RatingBar.Small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:isIndicator="true" android:progressTint="#FFC107" />
+                                    <TextView android:id="@+id/tvRating2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#666666" android:layout_marginTop="4dp" tools:text="5.0 / 5.0"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginVertical="16dp"/>
+                        </LinearLayout>
+
+                        <!-- Year Row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RELEASE YEAR" android:textColor="#999999" android:textSize="11sp" android:gravity="center" android:letterSpacing="0.1" android:textStyle="bold"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                                <TextView android:id="@+id/tvYear1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/black" android:textSize="15sp" tools:text="2024" />
+                                <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#F0F0F0" />
+                                <TextView android:id="@+id/tvYear2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/black" android:textSize="15sp" tools:text="2023" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Technical Specs Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:text="Technical Specifications"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="#FDFDFD"/>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                        <LinearLayout
+                            android:id="@+id/dynamicSpecsContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingVertical="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

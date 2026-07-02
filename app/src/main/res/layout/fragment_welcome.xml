@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_orange_bg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgloginLogo"
+        android:layout_width="247dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109"
+        app:srcCompat="@drawable/loginlogo" />
+
+    <ImageView
+        android:id="@+id/imgWelcome"
+        android:layout_width="396dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/welcomeimage"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgloginLogo"
+        app:layout_constraintWidth_percent="0.85"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Your Shopping\nCompanion"
+        android:textColor="@color/main"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgWelcome" />
+
+    <TextView
+        android:id="@+id/txtWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Explore different tech products and select the best one for yourself"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="148dp"
+        android:layout_weight="1.6"
+        android:background="@drawable/button_bg"
+        android:elevation="4dp"
+        android:text="Let's Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="88dp"
+        android:layout_weight="1.6"
+        android:background="@drawable/button_bg_2"
+        android:elevation="4dp"
+        android:text="I Already Have An Account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
